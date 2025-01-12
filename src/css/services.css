@@ -1,0 +1,93 @@
+.services-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .services-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .services-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .services-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px; /* Space between cards */
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .service-card {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+    height: 350px; /* Set fixed height for all cards */
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-image {
+    width: 100%; /* Image occupies full width */
+    height: 70%; /* Image occupies 60% of the card height */
+    object-fit: cover; /* Ensures proper scaling without distortion */
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 15px 5px; /* Left margin for alignment */
+    text-align: left; /* Aligns title to the left */
+    color: black;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    margin: 5px 15px; /* Left margin for alignment */
+    text-align: left; /* Aligns description to the left */
+  }
+  
+  .service-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 10px 15px; /* Left margin for alignment */
+    text-align: left; /* Aligns link to the left */
+  }
+  
+  .service-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .services-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-container {
+      grid-template-columns: 1fr; /* 1 card per row */
+    }
+  }
+  

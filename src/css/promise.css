@@ -1,0 +1,53 @@
+.promise-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f9fc;
+  }
+  
+  .promise-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+  }
+  
+  .promise-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .promise-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .promise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .promise-icon {
+    width: 98px;
+    margin-bottom: 20px;
+  }
+  
+  .promise-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .promise-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  

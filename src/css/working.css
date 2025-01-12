@@ -1,0 +1,60 @@
+.how-it-works-container {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+  }
+  
+
+  .work_head_sec{
+    color: black;
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+    margin-bottom: 60px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .step-card {
+    background: #ffffff;
+    box-shadow: 10px 30px 64px  #dce4f3;
+    border-radius: 10px;
+    padding: 20px;
+    width: 364px;
+    height: 270px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .step-image {
+    width: 98px;
+    height: 98px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 50%;
+  }
+  
+  .step-card h3 {
+    color: var(--Primary, #151515);
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; 
+  }
+  
+  
+  
