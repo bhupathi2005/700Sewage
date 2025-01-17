@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="hero-container">
       <div className="content">
-        <p className="tagline">BEST CLEANING SERVICES IN UAE</p>
-        <p className="head">700 Sewage Cleaning Services UAE</p>
-        <button className="book-now">Book Now</button>
+        <p className="tagline fadeInUp">BEST CLEANING SERVICES IN UAE</p>
+        <p className="head fadeInUp">700 Sewage Cleaning Services UAE</p>
+        <button className="book-now fadeInUp">Book Now</button>
       </div>
     </div>
   );

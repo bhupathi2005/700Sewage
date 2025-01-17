@@ -66,12 +66,14 @@
     text-align: left; /* Aligns description to the left */
   }
   
-  .service-link {
+  .service-linku {
     color: #007bff;
     text-decoration: none;
     font-size: 1rem;
     margin: 10px 15px; /* Left margin for alignment */
     text-align: left; /* Aligns link to the left */
+    border: none;
+    background: none;
   }
   
   .service-link:hover {
@@ -90,4 +92,119 @@
       grid-template-columns: 1fr; /* 1 card per row */
     }
   }
+  /* Blur effect when popup is active */
+.services-section {
+  transition: filter 0.3s;
+}
+
+.services-section .popup-overlay ~ .services-section {
+  filter: blur(5px);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.popup-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cleaning-process-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.cleaning-process-card {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cleaning-process-card .para-clean {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.cleaning-process-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0056d2; /* Match the blue background */
+  padding: 20px;
+  border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px; /* Add space between title and subtitle */
+}
+
+.header-title {
+  font-size: 45px;
+  width: 60%;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  color: #95979C; /* Match the green text color */
+  margin-top: 20px;
+}
+
+.header-close-btn {
+  background-color: #a4d462; /* Green circle for the close button */
+  border: none;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
   
+}
+
+.header-close-btn:hover {
+  background-color: #8db853; /* Slightly darker green on hover */
+}
+.bottom-sec{
+  padding: 40px;
+}
+.bottom-sec h1{
+  color: black;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 400;
+}

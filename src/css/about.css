@@ -54,4 +54,24 @@
     font-weight: 500;
     font-style: normal;
   }
-  
+  /* Keyframe for fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Moves the element up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Back to original position */
+  }
+}
+
+/* Animation class */
+.fadeInUp {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 1.5s ease-out forwards; /* Fades and slides up */
+}
+.fadeInUp.visible {
+  opacity: 1;
+  transform: translateY(0); /* Brings the element back to position */
+}

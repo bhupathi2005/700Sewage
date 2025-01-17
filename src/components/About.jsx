@@ -3,7 +3,7 @@ import "../css/about.css";
 import about from "../images/about.png"; 
 const AboutUs = () => {
   return (
-    <div className="about-us-container">
+    <div className="about-us-container fadeInUp">
       <div className="about-us-left">
         <div className="image-wrapper">
           <img src={about} alt="Default" className="about-us-image" />
