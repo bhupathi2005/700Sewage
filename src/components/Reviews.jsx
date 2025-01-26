@@ -6,7 +6,7 @@ class Reviews extends Component {
     const testimonials = [
       {
         name: "Walter Anderson",
-        rating: "4.5/5",
+        rating: "4.3/5",
         service: "Oil Tank Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
@@ -14,15 +14,15 @@ class Reviews extends Component {
       },
       {
         name: "John Davis",
-        rating: "4.5/5",
-        service: "Oil Tank Cleaning",
+        rating: "4.0/5",
+        service: "Water Tank Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
         date: "May 2, 2023",
       },
       {
         name: "Susan Torres",
-        rating: "4.5/5",
+        rating: "4.7/5",
         service: "Oil Tank Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
@@ -30,16 +30,16 @@ class Reviews extends Component {
       },
       {
         name: "Melissa Ross",
-        rating: "4.5/5",
-        service: "Oil Tank Cleaning",
+        rating: "4.1/5",
+        service: "Pipeline Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
         date: "June 10, 2023",
       },
       {
         name: "Brandon Miller",
-        rating: "4.5/5",
-        service: "Oil Tank Cleaning",
+        rating: "4.6/5",
+        service: "Grease Tap Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
         date: "July 7, 2023",
@@ -47,7 +47,7 @@ class Reviews extends Component {
       {
         name: "Gloria Williams",
         rating: "4.5/5",
-        service: "Oil Tank Cleaning",
+        service: "Water Tank Cleaning",
         feedback:
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
         date: "August 20, 2023",
@@ -57,21 +57,23 @@ class Reviews extends Component {
     return (
       <div className="reviews-section">
         <div className="head_rev">
-        <div className="head_side">
+          <div className="head_side">
             <p>TESTIMONIAL</p>
-        <h2 className="section-title">What They Say About <br></br>Our Service</h2>
-        </div>
-        <button className="see-all-button">See All Testimonial</button>
+            <h2 className="section-title">
+              What They Say About <br></br>Our Service
+            </h2>
+          </div>
+          <button className="see-all-button">See All Testimonial</button>
         </div>
         <div className="testimonials-container">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
               <div className="card_head">
-              <div className="avatar-placeholder"></div>
-              <div className="card_head_rating">
-              <h3 className="testimonial-name">{testimonial.name}</h3>
-              <p className="testimonial-rating">⭐ {testimonial.rating}</p>
-              </div>
+                <div className="avatar-placeholder"></div>
+                <div className="card_head_rating">
+                  <h3 className="testimonial-name">{testimonial.name}</h3>
+                  <p className="testimonial-rating">⭐ {testimonial.rating}</p>
+                </div>
               </div>
               <p className="testimonial-service">{testimonial.service}</p>
               <p className="testimonial-feedback">{testimonial.feedback}</p>

@@ -171,8 +171,8 @@
   font-weight: 600;
   color: #000;
 }
-.contact-descrition{
-  color: #95979C;
+.contact-descrition {
+  color: #95979c;
   margin-top: 20px;
   width: 90%;
   text-align: left;
@@ -203,12 +203,12 @@
   border-radius: 50%;
   background-color: #3b82f6;
 }
-.para-clean{
+.para-clean {
   color: black;
 }
-.para-cont{
+.para-cont {
   font-size: 14px;
-  color: #95979C;
+  color: #95979c;
 }
 
 /* Contact Icons */
@@ -223,24 +223,25 @@
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>')
     center/60% no-repeat;
 }
-.section-divide{
+.section-divide {
   width: 100%;
 }
-.line{
+.line {
   padding: 20px;
 }
-.card_images{
+.card_images {
   display: flex;
 }
-.card_images img{
-  width: 250px;
+.card_images img {
+  width: 410px;
+  height: 245px;
   margin-right: 30px;
 }
-.contact_button_card{
+.contact_button_card {
   text-align: right;
 }
-.contact_card_button{
-  background-color: #CAEE5A;
+.contact_card_button {
+  background-color: #caee5a;
   color: black;
   padding: 12px 25px;
   border-radius: 22px;
@@ -249,7 +250,7 @@
   border: none;
   margin-top: 20px;
 }
-.horizontal_line{
+.horizontal_line {
   color: rgb(230, 226, 226);
 }
 
@@ -264,7 +265,7 @@
   .services-container {
     grid-template-columns: 1fr;
   }
-  .card_images img{
+  .card_images img {
     width: 150px;
     margin-right: 30px;
   }
@@ -273,12 +274,10 @@
     width: 95%;
     margin: 10px;
   }
-  .contact_button_card{
+  .contact_button_card {
     text-align: center;
   }
-  .contact_card_button{
+  .contact_card_button {
     cursor: pointer;
   }
 }
-
-  
