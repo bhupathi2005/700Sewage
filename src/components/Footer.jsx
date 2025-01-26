@@ -46,19 +46,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Subscribe Section */}
+        {/* Contact Now Section */}
         <div className="footer-section">
-          <h4>Subscribe</h4>
-          <form className="footer-subscribe-form">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="footer-input"
-            />
-            <button type="submit" className="footer-subscribe-button">
-              Subscribe
-            </button>
-          </form>
+          <h4>Contact Now</h4>
+          <a href="tel:+0555989664" className="footer-contact-button">
+            Call Us Now
+          </a>
         </div>
       </div>
 

@@ -1,43 +1,66 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import "../css/navbar.css";
-import logo from "../images/logo.jpg"
+import logo from "../images/logo.jpg";
 
 const Navbar = () => {
+  const [activeSection, setActiveSection] = useState("home_section"); // Track the active section
+  const [menuOpen, setMenuOpen] = useState(false); // Track the menu open state
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth", // Enables smooth scrolling
+    });
+    setActiveSection(sectionId); // Update the active section
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    window.location.href = "tel:+0555989664"; // Manually initiate the phone call
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu state
+  };
+
   return (
     <nav className="navbar">
       <div className="container">
-        <NavLink to="/" className="logo">
-          <img src={logo} alt="700seweagecleaning"/>
-        </NavLink>
-        <div className="menu">
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}
+        <a href="/" className="logo">
+          <img src={logo} alt="700seweagecleaning" />
+        </a>
+        <div className={`menu ${menuOpen ? "active" : ""}`}>
+          <a
+            href="#home_section"
+            className={`menu-item ${activeSection === "home_section" ? "active" : ""}`}
+            onClick={(e) => scrollToSection(e, "home_section")}
           >
             Home
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}
+          </a>
+          <a
+            href="#about_section"
+            className={`menu-item ${activeSection === "about_section" ? "active" : ""}`}
+            onClick={(e) => scrollToSection(e, "about_section")}
           >
             About Us
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}
+          </a>
+          <a
+            href="#services_section"
+            className={`menu-item ${activeSection === "services_section" ? "active" : ""}`}
+            onClick={(e) => scrollToSection(e, "services_section")}
+          >
+            Services
+          </a>
+          <a
+            href="#contact"
+            className={`menu-item ${activeSection === "contact" ? "active" : ""}`}
+            onClick={(e) => scrollToSection(e, "contact")}
           >
             Contact
-          </NavLink>
-          <NavLink className="contact">Contact Us</NavLink>
+          </a>
+          <a href="/#" onClick={handleContactClick} className="contact">Contact Us</a>
         </div>
-        <button className="menu-toggle" id="menu-toggle">
+        <button className="menu-toggle" id="menu-toggle" onClick={toggleMenu}>
           ☰
         </button>
       </div>

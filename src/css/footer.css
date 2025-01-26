@@ -63,31 +63,25 @@
   }
   
   /* Subscribe Form */
-  .footer-subscribe-form {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .footer-input {
-    padding: 0.8rem;
-    border-radius: 4px;
-    border: none;
-    width: 70%;
-    font-size: 1rem;
-  }
-  
-  .footer-subscribe-button {
-    padding: 0.8rem 1rem;
-    background-color: #CAEE5A;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+  /* Contact Now Button Style */
+.footer-contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #CAEE5A; /* Blue background for the contact button */
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-contact-button:hover {
+  background-color: #93b430; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
   
   .footer-subscribe-button:hover {
     background-color: #93b430;

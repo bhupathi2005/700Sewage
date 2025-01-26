@@ -27,7 +27,7 @@
     box-shadow: 10px 30px 64px  #dce4f3;
     border-radius: 10px;
     padding: 20px;
-    width: 364px;
+    width: 250px;
     height: 270px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -40,11 +40,16 @@
   }
   
   .step-image {
-    width: 98px;
-    height: 98px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     margin-bottom: 15px;
     border-radius: 50%;
+  }
+  .step-para{
+    font-size: 14px;
+  color: #95979C;
+  margin-top: 20px;
   }
   
   .step-card h3 {

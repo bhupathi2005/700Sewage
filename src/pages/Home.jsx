@@ -8,19 +8,29 @@ import WorkExp from "../components/WorkExp";
 import Reviews from "../components/Reviews";
 import Contacts from "../components/Contacts";
 import Footer from "../components/Footer.jsx"
+import Navbar from "../components/Navbar.jsx";
 
 class Home extends Component{
     render(){
         return(
             <div>
-                <Homesec />
-                <About />
+                <Navbar />
+                <section id="home_section">
+                    <Homesec />
+                </section>
+                <section id="about_section">
+                    <About />
+                </section>
                 <Working />
-                <Services />
+                <section id="services_section">
+                    <Services />
+                </section>
                 <Promise />
                 <WorkExp />
                 <Reviews />
-                <Contacts />
+                <section id="contact">
+                    <Contacts />
+                </section>
                 <Footer />
             </div>
         )

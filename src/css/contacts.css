@@ -1,24 +1,54 @@
-/* Contact.css */
-
+/* For medium and large screens */
 .contact-page {
-    min-height: 100vh;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-      ),
-      url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 2rem;
-  }
-  
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns layout */
+  gap: 4rem;
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
   .contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 90px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+      grid-template-columns: 1fr; /* 1 column layout */
+      gap: 2rem;
   }
-  
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .contact-page {
+      padding: 1.5rem; /* Reduced padding on smaller screens */
+  }
+
+  .contact-container {
+      grid-template-columns: 1fr; /* 1 column layout */
+      gap: 1.5rem;
+  }
+}
+
+/* For very small screens like phones */
+@media (max-width: 480px) {
+  .contact-page {
+      padding: 1rem; /* Reduce padding for phones */
+  }
+
+  .contact-container {
+      grid-template-columns: 1fr; /* Ensure 1 column layout on phones */
+      gap: 1rem;
+  }
+}

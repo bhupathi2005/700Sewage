@@ -7,7 +7,9 @@ function App() {
       <div className="content">
         <p className="tagline fadeInUp">BEST CLEANING SERVICES IN UAE</p>
         <p className="head fadeInUp">700 Sewage Cleaning Services UAE</p>
-        <button className="book-now fadeInUp">Book Now</button>
+        <a href="tel:+0555989664">
+          <button className="book-now fadeInUp">Call Now</button>
+        </a>
       </div>
     </div>
   );

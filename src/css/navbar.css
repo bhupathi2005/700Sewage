@@ -78,6 +78,7 @@ body {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
@@ -103,5 +104,11 @@ body {
   .menu-toggle {
     display: block;
   }
-}
+  .contact {
+    font-size: 16px; /* Smaller font size for better fitting */
+    padding: 10px 15px; /* Adjusted padding for smaller screens */
+    background-color: #CAEE5A; 
+    text-align: center;
+  }
 
+}

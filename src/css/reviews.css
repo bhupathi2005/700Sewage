@@ -131,3 +131,52 @@
     margin: 0;
     font-size: 0.9rem;
 }
+/* Adjust grid layout for smaller screens */
+@media (max-width: 1024px) {
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .head_rev {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .testimonials-container {
+        grid-template-columns: 1fr; /* 1 card per row on smaller devices */
+    }
+
+    .section-title {
+        font-size: 1.6rem; /* Smaller font size for title */
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-section {
+        padding: 20px 10px; /* Reduce padding for mobile devices */
+    }
+
+    .section-title {
+        font-size: 1.4rem; /* Further reduce font size for title */
+    }
+
+    .see-all-button {
+        font-size: 10px; /* Smaller button size */
+        padding: 8px 16px;
+    }
+
+    .testimonial-card {
+        padding: 15px; /* Reduce padding inside cards */
+    }
+
+    .testimonial-feedback {
+        font-size: 0.8rem; /* Smaller feedback font size */
+    }
+
+    .testimonial-date {
+        font-size: 0.75rem; /* Smaller date font size */
+    }
+}
