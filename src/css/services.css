@@ -299,3 +299,47 @@
     cursor: pointer;
   }
 }
+@media (max-width: 480px){
+  .contact-contain {
+    padding: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  
+  .contact-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+  }
+  .contact-descrition {
+    width: 100%;
+    color: #95979c;
+    margin-top: 20px;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .contact-body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+  .card_images {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .card_images img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contact-item{
+    width: 100%;
+  }
+  .contact-item span{
+    font-size: 12px;
+  }
+}
