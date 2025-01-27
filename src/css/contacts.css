@@ -48,7 +48,7 @@
   }
 
   .contact-container {
-      grid-template-columns: 1fr; /* Ensure 1 column layout on phones */
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
   }
 }
