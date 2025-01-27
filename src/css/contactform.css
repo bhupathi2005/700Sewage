@@ -51,6 +51,7 @@
     backdrop-filter: blur(10px); /* Glass effect */
     -webkit-backdrop-filter: blur(10px); /* Glass effect for Safari */
     border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+
   }
   
   .contact-form h1 {
@@ -95,5 +96,36 @@
   
   .contact-form button:hover {
     background: #CAEE5A;
+  }
+  @media screen and (max-width: 480px) {
+    .contact-section {
+      flex-direction: column; /* Stack the elements vertically */
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .contact-info {
+      margin-bottom: 20px; /* Add space between sections */
+      text-align: center; /* Center-align text for better readability */
+    }
+  
+    .contact-form {
+      width: 100%; /* Ensure it takes the full width of the screen */
+      padding: 15px; /* Reduce padding for better spacing on smaller screens */
+    }
+  
+    .contact-form h1 {
+      font-size: 1.5rem; /* Adjust font size for headings */
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem; /* Adjust font size for inputs */
+      padding: 15px; /* Reduce padding for inputs and textareas */
+    }
+  
+    .contact-form button {
+      font-size: 0.9rem; /* Reduce button font size */
+      padding: 15px; /* Adjust padding for the button */
+    }
   }
   
