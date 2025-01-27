@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Before from "../images/Before.jpg";
-import After from "../images/After.jpg";
 
-const ImageComparisonSlider = () => {
+const ImageComparisonSlider = ({ before, after }) => {
   const [position, setPosition] = useState(50);
   const [direction, setDirection] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
@@ -78,7 +76,7 @@ const ImageComparisonSlider = () => {
       >
         {/* After Image (Full Background) */}
         <img
-          src={After}
+          src={after}
           alt="After"
           style={{
             position: "absolute",
@@ -99,7 +97,7 @@ const ImageComparisonSlider = () => {
           }}
         >
           <img
-            src={Before}
+            src={before}
             alt="Before"
             style={{
               position: "absolute",
@@ -135,7 +133,7 @@ const ImageComparisonSlider = () => {
             top: "2rem",
             right: "2rem",
             padding: "0.75rem 1.5rem",
-            backgroundColor: "green",
+            backgroundColor: " #CAEE5A",
             borderRadius: "9999px",
             color: "white",
             fontWeight: "600",

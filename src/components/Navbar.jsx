@@ -32,33 +32,47 @@ const Navbar = () => {
         <div className={`menu ${menuOpen ? "active" : ""}`}>
           <a
             href="#home_section"
-            className={`menu-item ${activeSection === "home_section" ? "active" : ""}`}
+            className={`menu-item ${
+              activeSection === "home_section" ? "active" : ""
+            }`}
             onClick={(e) => scrollToSection(e, "home_section")}
           >
             Home
           </a>
           <a
             href="#about_section"
-            className={`menu-item ${activeSection === "about_section" ? "active" : ""}`}
+            className={`menu-item ${
+              activeSection === "about_section" ? "active" : ""
+            }`}
             onClick={(e) => scrollToSection(e, "about_section")}
           >
             About Us
           </a>
           <a
             href="#services_section"
-            className={`menu-item ${activeSection === "services_section" ? "active" : ""}`}
+            className={`menu-item ${
+              activeSection === "services_section" ? "active" : ""
+            }`}
             onClick={(e) => scrollToSection(e, "services_section")}
           >
             Services
           </a>
           <a
             href="#contact"
-            className={`menu-item ${activeSection === "contact" ? "active" : ""}`}
+            className={`menu-item ${
+              activeSection === "contact" ? "active" : ""
+            }`}
             onClick={(e) => scrollToSection(e, "contact")}
           >
             Contact
           </a>
-          <a href="/#" onClick={handleContactClick} className="contact">Contact Us</a>
+          <a
+            href="tel:+9710555989664"
+            onClick={handleContactClick}
+            className="contact"
+          >
+            Contact Us
+          </a>
         </div>
         <button className="menu-toggle" id="menu-toggle" onClick={toggleMenu}>
           ☰

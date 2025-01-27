@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import "../css/services.css"; // Link the external CSS file
 import car from "../images/car.png";
-import { useState } from "react";
 import "../css/working.css";
-import Contactcard1 from "../images/Contactcard1.jpg";
-import Work from "../images/work.png";
-import vcard from "../images/vcard.jpg";
 import services from "../ServicesInformation";
 import PopupComponent from "./PopupComponent";
 
@@ -51,15 +47,27 @@ class Services extends Component {
         </div>
 
         {selectedService && (
-          <PopupComponent
-            show={showPopup}
-            title={selectedService.title}
-            details={selectedService.details}
-            cleaningProcess={selectedService.cleaningProcess}
-            whyChooseUs={selectedService.whyChooseUs}
-            faqs={selectedService.faqs}
-            onClose={this.handleClosePopup}
-          />
+          <div
+            className="popup-overlay"
+            onClick={(e) => {
+              // Close the popup only if the user clicks outside the popup
+              if (e.target.classList.contains("popup-overlay")) {
+                this.handleClosePopup();
+              }
+            }}
+          >
+            <div className="popup-content">
+              <PopupComponent
+                show={showPopup}
+                title={selectedService.title}
+                details={selectedService.details}
+                cleaningProcess={selectedService.cleaningProcess}
+                whyChooseUs={selectedService.whyChooseUs}
+                faqs={selectedService.faqs}
+                onClose={this.handleClosePopup}
+              />
+            </div>
+          </div>
         )}
       </div>
     );

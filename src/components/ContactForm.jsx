@@ -1,7 +1,7 @@
-import React, { useReducer } from 'react';
-import { Send } from 'lucide-react';
-import emailjs from 'emailjs-com';
-import '../css/contactform.css'; // Import the CSS file
+import React, { useReducer } from "react";
+import { Send } from "lucide-react";
+import emailjs from "emailjs-com";
+import "../css/contactform.css"; // Import the CSS file
 
 // Reducer function for form state management
 const formReducer = (state, action) => {
@@ -13,10 +13,10 @@ const formReducer = (state, action) => {
 
 const ContactForm = () => {
   const [formData, dispatch] = useReducer(formReducer, {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e) => {
@@ -25,19 +25,19 @@ const ContactForm = () => {
     // Call EmailJS to send the form data
     emailjs
       .sendForm(
-        'service_wqdztoo', // Your EmailJS service ID
-        'template_qxvvv8g', // Your EmailJS template ID
+        "service_wqdztoo", // Your EmailJS service ID
+        "template_qxvvv8g", // Your EmailJS template ID
         e.target, // The form DOM element
-        '6XgXRw7s-EsLwhL1Y' // Your EmailJS user ID
+        "6XgXRw7s-EsLwhL1Y" // Your EmailJS user ID
       )
       .then(
         (result) => {
-          console.log('Email sent:', result.text);
-          alert('Message sent successfully!');
+          console.log("Email sent:", result.text);
+          alert("Message sent successfully!");
         },
         (error) => {
-          console.error('Email error:', error.text);
-          alert('Failed to send the message. Please try again later.');
+          console.error("Email error:", error.text);
+          alert("Failed to send the message. Please try again later.");
         }
       );
   };
@@ -90,5 +90,4 @@ const ContactForm = () => {
     </form>
   );
 };
-
 export default ContactForm;
