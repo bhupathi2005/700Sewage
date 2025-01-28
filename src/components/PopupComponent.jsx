@@ -101,7 +101,7 @@ const PopupComponent = ({
 
         {/* Why Choose Us Section */}
         <div className="how-it-works-container">
-          <h2 className="work_head_sec">HOW IT WORKS</h2>
+          <h2 className="work_head_sec">How It Works</h2>
           <div className="steps-container">
             {whyChooseUs.map((step, index) => (
               <div className="step-card" key={index}>

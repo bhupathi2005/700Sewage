@@ -70,21 +70,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-top: 45px;
 }
 
 .popup-content {
   background: white;
   width: 90%;
   max-width: 1000px;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
-  padding: 0; /* Removed padding to allow header to touch edges */
   border-radius: 33px; /* Increased border radius */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -112,6 +111,7 @@
   font-size: 1rem;
   color: #d3d3d3;
   margin-top: 5px;
+  text-align: left;
 }
 .popup-content::-webkit-scrollbar {
   display: none;
@@ -299,13 +299,27 @@
     cursor: pointer;
   }
 }
-@media (max-width: 480px){
+@media (max-width: 480px) {
+  .header-close-btn {
+    padding: 5px 10px;
+  }
+  .header-title {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  .work_head_sec {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .header-subtitle {
+    text-align: left;
+  }
   .contact-contain {
     padding: 20px;
     padding-top: 20px;
     margin: 0 auto;
   }
-  
+
   .contact-heading {
     font-size: 28px;
     font-weight: 600;
@@ -319,27 +333,27 @@
     text-align: left;
     margin-bottom: 20px;
   }
-  
+
   .contact-body {
     display: grid;
     justify-content: center;
     align-items: center;
     color: black;
   }
-  
+
   .card_images {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  .card_images img{
+  .card_images img {
     width: 100%;
     margin-bottom: 10px;
   }
-  .contact-item{
+  .contact-item {
     width: 100%;
   }
-  .contact-item span{
+  .contact-item span {
     font-size: 12px;
   }
 }

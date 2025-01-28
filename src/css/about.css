@@ -42,7 +42,7 @@
 }
 
 .about-us-right p {
-  color: #95979C;
+  color: #95979c;
   font-size: 18px;
   line-height: 1.6;
   font-family: "Inter", sans-serif;
@@ -158,6 +158,7 @@
 
   .about-us-right h2 {
     font-size: 28px;
+    text-align: center;
   }
 
   .about-us-right p {

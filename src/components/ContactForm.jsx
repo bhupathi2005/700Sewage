@@ -12,12 +12,14 @@ const formReducer = (state, action) => {
 };
 
 const ContactForm = () => {
-  const [formData, dispatch] = useReducer(formReducer, {
+  const initialFormState = {
     name: "",
     email: "",
     subject: "",
     message: "",
-  });
+  };
+
+  const [formData, dispatch] = useReducer(formReducer, initialFormState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +36,12 @@ const ContactForm = () => {
         (result) => {
           console.log("Email sent:", result.text);
           alert("Message sent successfully!");
+
+          // Reset form data after successful submission
+          dispatch({ name: "name", value: "" });
+          dispatch({ name: "email", value: "" });
+          dispatch({ name: "subject", value: "" });
+          dispatch({ name: "message", value: "" });
         },
         (error) => {
           console.error("Email error:", error.text);
@@ -90,4 +98,5 @@ const ContactForm = () => {
     </form>
   );
 };
+
 export default ContactForm;
