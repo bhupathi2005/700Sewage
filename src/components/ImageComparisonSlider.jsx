@@ -30,28 +30,33 @@ const ImageComparisonSlider = ({ before, after }) => {
   }, [direction, isPaused, isDragging]);
 
   // Handle user dragging the slider
-  const handleMouseDown = () => {
+  const handleStart = (e) => {
     setIsDragging(true);
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+    const moveEvent = e.touches ? "touchmove" : "mousemove";
+    const endEvent = e.touches ? "touchend" : "mouseup";
+    document.addEventListener(moveEvent, handleMove);
+    document.addEventListener(endEvent, handleEnd);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMove = (e) => {
     const slider = document.getElementById("slider-container");
     if (!slider) return;
 
     const rect = slider.getBoundingClientRect();
-    const newPosition = ((e.clientX - rect.left) / rect.width) * 100;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const newPosition = ((clientX - rect.left) / rect.width) * 100;
 
     if (newPosition >= 0 && newPosition <= 100) {
       setPosition(newPosition);
     }
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = (e) => {
     setIsDragging(false);
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
+    const moveEvent = e.touches ? "touchmove" : "mousemove";
+    const endEvent = e.touches ? "touchend" : "mouseup";
+    document.removeEventListener(moveEvent, handleMove);
+    document.removeEventListener(endEvent, handleEnd);
   };
 
   return (
@@ -60,7 +65,6 @@ const ImageComparisonSlider = ({ before, after }) => {
         width: "100%",
         maxWidth: "450px",
         margin: "0 auto",
-        padding: "1rem",
       }}
     >
       <div
@@ -175,7 +179,8 @@ const ImageComparisonSlider = ({ before, after }) => {
                 "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
               cursor: "grab",
             }}
-            onMouseDown={handleMouseDown}
+            onMouseDown={handleStart}
+            onTouchStart={handleStart}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

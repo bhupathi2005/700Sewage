@@ -1,7 +1,7 @@
 const services = [
   {
     title: "Sewage Tank Cleaning",
-    details: "Comprehensive cleaning solutions in Mumbai.",
+    details: "Comprehensive cleaning solutions in UAE.",
     cleaningProcess: [
       {
         title: "Mechanized De-Watering",

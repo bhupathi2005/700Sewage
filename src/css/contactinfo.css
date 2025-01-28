@@ -1,40 +1,79 @@
-/* ContactInfo.css */
 .contact-info {
-    padding: 2rem;
-    color: white;
-  }
-  
+  padding: 2rem;
+  color: white;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.contact-info-item .icon {
+  color: #caee5a;
+  flex-shrink: 0; /* Ensure the icon doesn't shrink */
+  width: 30px; /* Set a fixed width for icons */
+  height: 30px; /* Set a fixed height for icons */
+}
+
+.contact-info-item div {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.contact-info-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-info-item p {
+  margin: 0;
+}
+
+.contact-info-item .highlight {
+  font-weight: bold;
+  color: #caee5a;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 420px) {
   .contact-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2rem; /* Reduce the heading size for smaller screens */
   }
-  
+
   .contact-info-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 1rem; /* Increase gap for better spacing */
   }
-  
+
   .contact-info-item .icon {
-    color: #CAEE5A;
+    width: 30px; /* Adjust icon size */
+    height: 30px;
   }
-  
+
+  .contact-info-item div {
+    text-align: left;
+    flex: 1 1 100%; /* Ensure content takes full width in wrapped state */
+  }
+
   .contact-info-item a {
-    color: white;
-    text-decoration: none;
+    display: block; /* Ensure links appear in their own line */
   }
-  
-  .contact-info-item a:hover {
-    text-decoration: underline;
+}
+@media (max-width: 340px) {
+  .contact-info-item div {
+    font-size: 15px;
   }
-  
-  .contact-info-item p {
-    margin: 0;
-  }
-  
-  .contact-info-item .highlight {
-    font-weight: bold;
-    color: #CAEE5A;
-  }
-  
+}
