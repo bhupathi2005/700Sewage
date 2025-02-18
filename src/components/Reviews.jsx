@@ -36,14 +36,7 @@ class Reviews extends Component {
           "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
         date: "June 10, 2023",
       },
-      {
-        name: "Brandon Miller",
-        rating: "4.6/5",
-        service: "Grease Tap Cleaning",
-        feedback:
-          "Nunc enim tincidunt nec arcu et risus suspendisse eget id. Quis pellentesque sem proin sed sagittis orci nullam in.",
-        date: "July 7, 2023",
-      },
+      
       {
         name: "Gloria Williams",
         rating: "4.5/5",

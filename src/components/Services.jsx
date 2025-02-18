@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../css/services.css"; // Link the external CSS file
-import car from "../images/car.png";
 import "../css/working.css";
 import services from "../ServicesInformation";
 import PopupComponent from "./PopupComponent";
@@ -33,7 +32,7 @@ class Services extends Component {
         <div className="services-container">
           {services.map((service, index) => (
             <div key={index} className="service-card">
-              <img src={car} alt={service.title} className="service-image" />
+              <img src={service.img} alt={service.imgAlt} className="service-image" />
               <h3 className="service-title">{service.title}</h3>
               <p>{service.details}</p>
               <button

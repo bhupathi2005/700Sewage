@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate & useLocation
 import "../css/navbar.css";
 import logo from "../images/logo.jpg";
 
@@ -6,20 +7,31 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home_section");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const navigate = useNavigate(); // Hook for navigation
+  const location = useLocation(); // Get current location
 
-  const scrollToSection = (e, sectionId) => {
+  // Scroll to section when route changes
+  useEffect(() => {
+    const sectionId = location.hash.replace("#", ""); // Extract section ID from URL
+    if (sectionId) {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [location]); // Run whenever location changes
+
+  const handleNavClick = (e, sectionId) => {
     e.preventDefault();
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-    });
-    setTimeout(() => {
-      setMenuOpen(false); // Close the menu after scrolling is initiated
-    }, 300); // Add a slight delay to allow scrolling to complete
+    navigate(`#${sectionId}`); // Update the URL
     setActiveSection(sectionId);
+
+    setTimeout(() => {
+      setMenuOpen(false); // Close the menu after scrolling
+    }, 300);
   };
 
   const toggleMenu = () => {
-    setMenuOpen((prev) => !prev); // Toggle the menu state
+    setMenuOpen((prev) => !prev);
   };
 
   // Close menu when clicking outside
@@ -45,49 +57,33 @@ const Navbar = () => {
         <div className={`menu ${menuOpen ? "active" : ""}`} ref={menuRef}>
           <a
             href="#home_section"
-            className={`menu-item ${
-              activeSection === "home_section" ? "active" : ""
-            }`}
-            onClick={(e) => scrollToSection(e, "home_section")}
+            className={`menu-item ${activeSection === "home_section" ? "active" : ""}`}
+            onClick={(e) => handleNavClick(e, "home_section")}
           >
             Home
           </a>
           <a
             href="#about_section"
-            className={`menu-item ${
-              activeSection === "about_section" ? "active" : ""
-            }`}
-            onClick={(e) => scrollToSection(e, "about_section")}
+            className={`menu-item ${activeSection === "about_section" ? "active" : ""}`}
+            onClick={(e) => handleNavClick(e, "about_section")}
           >
             About Us
           </a>
           <a
             href="#services_section"
-            className={`menu-item ${
-              activeSection === "services_section" ? "active" : ""
-            }`}
-            onClick={(e) => scrollToSection(e, "services_section")}
+            className={`menu-item ${activeSection === "services_section" ? "active" : ""}`}
+            onClick={(e) => handleNavClick(e, "services_section")}
           >
             Services
           </a>
           <a
             href="#contact"
-            className={`menu-item ${
-              activeSection === "contact" ? "active" : ""
-            }`}
-            onClick={(e) => scrollToSection(e, "contact")}
+            className={`menu-item ${activeSection === "contact" ? "active" : ""}`}
+            onClick={(e) => handleNavClick(e, "contact")}
           >
             Contact
           </a>
-          <a
-            href="tel:+9710555989664"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "tel:+9710555989664";
-              setMenuOpen(false);
-            }}
-            className="contact"
-          >
+          <a href="tel:+9710555989664" className="contact">
             Contact Us
           </a>
         </div>

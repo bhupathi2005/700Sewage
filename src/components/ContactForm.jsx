@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import { Send } from "lucide-react";
 import emailjs from "emailjs-com";
 import "../css/contactform.css"; // Import the CSS file
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 // Reducer function for form state management
 const formReducer = (state, action) => {
@@ -12,6 +13,7 @@ const formReducer = (state, action) => {
 };
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const initialFormState = {
     name: "",
     email: "",
@@ -34,14 +36,14 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log("Email sent:", result.text);
-          alert("Message sent successfully!");
+          
 
           // Reset form data after successful submission
           dispatch({ name: "name", value: "" });
           dispatch({ name: "email", value: "" });
           dispatch({ name: "subject", value: "" });
           dispatch({ name: "message", value: "" });
+          navigate("/thank-you");
         },
         (error) => {
           console.error("Email error:", error.text);

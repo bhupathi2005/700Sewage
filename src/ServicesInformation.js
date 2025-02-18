@@ -1,6 +1,15 @@
+import OilTankCleaning from "./images/OilTankCleaning.jpg"
+import PipeLineCleaning from "./images/PipeLineCleaning.jpg"
+import SewageCleaningServices from "./images/SewageCleaningServices.jpg"
+import SewageDrainageLineBlockageRemoval from "./images/SewageDrainageLineBlockageRemoval.jpg"
+import WaterTankCleaning from "./images/WaterTankCleaning.jpg";
+
+
 const services = [
   {
     title: "Sewage Tank Cleaning",
+    img:SewageCleaningServices,
+    imgAlt:"Top Sewage Cleaning Services in UAE",
     details: "Comprehensive cleaning solutions in UAE.",
     cleaningProcess: [
       {
@@ -80,6 +89,8 @@ const services = [
   },
   {
     title: "Sewage Drainage Line Blockage Removal",
+    img:SewageDrainageLineBlockageRemoval,
+    imgAlt:"Top Drain Line Sewage Cleaning Services in UAE",
     details: "Specialized blockage removal services.",
     cleaningProcess: [
       {
@@ -185,6 +196,8 @@ const services = [
   },
   {
     title: "Oil Tank Cleaning",
+    img:OilTankCleaning,
+    imgAlt:"Top Oil Tank Services in UAE",
     details: "Expert oil tank cleaning solutions.",
     cleaningProcess: [
       {
@@ -296,96 +309,11 @@ const services = [
       },
     ],
   },
-  {
-    title: "Grease Trap Cleaning",
-    details: "Efficient grease trap maintenance.",
-    cleaningProcess: [
-      {
-        title: "Installation Procedure",
-        description:
-          "Determine the appropriate size and type of grease trap, place it near the source of grease-laden wastewater, and integrate with the plumbing system.",
-      },
-      {
-        title: "Cleaning Procedure",
-        description:
-          "Wear protective gear, turn off the water flow, remove the lid, scoop out grease, inspect for damage or blockages, clean the components, and reassemble.",
-      },
-      {
-        title: "Disposal Procedure",
-        description:
-          "Dispose of grease waste according to local regulations, avoiding pouring it down drains or into garbage bins.",
-      },
-    ],
-    whyChooseUs: [
-      {
-        title: "Prevents Plumbing Issues",
-        description: "Reduces clogs and backups, saving on costly repairs.",
-      },
-      {
-        title: "Regulatory Compliance",
-        description: "Meets local health and safety standards to avoid fines.",
-      },
-      {
-        title: "Improved Hygiene",
-        description:
-          "Reduces foul odors and creates a cleaner kitchen environment.",
-      },
-      {
-        title: "Cost Savings",
-        description:
-          "Prolongs the lifespan of plumbing systems and reduces maintenance costs.",
-      },
-      {
-        title: "Protects Waterways",
-        description:
-          "Prevents FOG from entering natural water systems, preserving aquatic ecosystems.",
-      },
-      {
-        title: "Enhanced Reputation",
-        description:
-          "Shows a commitment to environmental sustainability and hygiene.",
-      },
-    ],
-    faqs: [
-      {
-        question: "What is a grease trap?",
-        answer:
-          "A grease trap is a device designed to capture grease, fats, and oils from wastewater before it enters the main sewer system.",
-      },
-      {
-        question: "Why are grease traps necessary?",
-        answer:
-          "They prevent clogs in the plumbing and reduce environmental pollution by keeping fats, oils, and grease (FOG) out of waterways.",
-      },
-      {
-        question: "Who needs a grease trap?",
-        answer:
-          "Restaurants, commercial kitchens, food processors, and any facility generating significant amounts of greasy wastewater.",
-      },
-      {
-        question: "How often should grease traps be cleaned?",
-        answer:
-          "Typically every 1–3 months, depending on usage, but local regulations may require more frequent cleaning.",
-      },
-      {
-        question: "What happens if I don’t clean my grease trap?",
-        answer:
-          "Foul odors, plumbing backups, potential fines from local authorities, and environmental hazards can result.",
-      },
-      {
-        question: "What types of grease traps are there?",
-        answer:
-          "1. Passive Grease Traps (small, under-sink units), 2. Automatic Grease Removal Units (mechanized systems), 3. Gravity Grease Interceptors (large outdoor systems).",
-      },
-      {
-        question: "Can grease traps handle all kitchen waste?",
-        answer:
-          "No, grease traps are designed specifically for FOG. Solids should be disposed of separately.",
-      },
-    ],
-  },
+  
   {
     title: "Water Tank Cleaning",
+    img:WaterTankCleaning,
+    imgAlt:"Top Water Tank Cleaning Services in UAE",
     details: "Thorough water tank sanitization.",
     cleaningProcess: [
       {
@@ -569,6 +497,8 @@ const services = [
   },
   {
     title: "Pipeline & Drain Line Cleaning",
+    img:PipeLineCleaning,
+    imgAlt:"Top Pipeline Bloackage Removal Services in UAE",
     details: "Advanced pipeline cleaning services.",
     cleaningProcess: [
       {
