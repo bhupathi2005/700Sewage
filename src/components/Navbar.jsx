@@ -83,7 +83,7 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <a href="tel:+9710555989664" className="contact">
+          <a href="tel:++971555989664" className="contact">
             Contact Us
           </a>
         </div>
