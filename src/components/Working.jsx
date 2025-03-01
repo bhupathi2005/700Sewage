@@ -1,19 +1,21 @@
 import React from "react";
 import "../css/working.css";
-import work from "../images/work.png"
+import Workicon1 from "../images/Worksicon1.png"
+import Workicon2 from "../images/Worksicon2.png"
+import Workicon3 from "../images/Worksicon3.png"
 
 const HowItWorks = () => {
   const steps = [
     {
-      imgSrc: work, 
+      imgSrc: Workicon1, 
       title: "Book Your Service Through a Phone Call"
     },
     {
-      imgSrc: work,
+      imgSrc: Workicon2,
       title: "Quick & Reliable Response"
     },
     {
-      imgSrc: work,
+      imgSrc: Workicon3,
       title: "Thorough Cleaning & Lasting Results"
     },
   ];
