@@ -6,15 +6,15 @@ const HowItWorks = () => {
   const steps = [
     {
       imgSrc: work, 
-      title: "High Professionalism and Expertise"
+      title: "Book Your Service Through a Phone Call"
     },
     {
       imgSrc: work,
-      title: "Quick and Efficient Problem Solving"
+      title: "Quick & Reliable Response"
     },
     {
       imgSrc: work,
-      title: "Innovation and Up-to-Date Technology"
+      title: "Thorough Cleaning & Lasting Results"
     },
   ];
 

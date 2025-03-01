@@ -11,8 +11,8 @@ const ContactInfo = () => {
         <Mail className="icon" />
         <div>
           <p>Mail:</p>
-          <a href="mailto:700sewagecleaningservices@gmail.com">
-            700sewagecleaningservices@gmail.com
+          <a href="mailto:700cleaningservices@gmail.com">
+            700cleaningservices@gmail.com
           </a>
         </div>
       </div>
@@ -31,7 +31,7 @@ const ContactInfo = () => {
           <p>Give us a ring</p>
           <p className="highlight">SRINU GEDDADA</p>
           <p>
-            Phone: <a href="tel:0555989664">0555989664</a>
+            Phone: <a href="tel:+971555989664">+971555989664</a>
           </p>
         </div>
       </div>
