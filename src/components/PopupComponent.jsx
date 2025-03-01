@@ -133,11 +133,11 @@ const PopupComponent = ({
             </p>
             <div className="contact-item">
               <div className="contact-icon phone-icon"></div>
-              <span>0555989664</span>
+              <span>971555989664</span>
             </div>
             <div className="contact-item">
               <div className="contact-icon email-icon"></div>
-              <span>700sewagecleaningservices@gmail.com</span>
+              <span>700cleaningservices@gmail.com</span>
             </div>
           </div>
 
@@ -147,7 +147,7 @@ const PopupComponent = ({
           </div>
 
           <div className="contact_button_card">
-            <a href="tel:+9710555989664" title="Call us now">
+            <a href="tel:+971555989664" title="Call us now">
               <button className="contact_card_button">Contact Us</button>
             </a>
           </div>

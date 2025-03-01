@@ -14,7 +14,7 @@ function App() {
       <div className="content">
         <p className="tagline fadeInUp">BEST CLEANING SERVICES IN UAE</p>
         <p className="head fadeInUp">700 Sewage Cleaning Services UAE</p>
-        <a href="tel:+0555989664">
+        <a href="tel:+971555989664">
           <button className="book-now fadeInUp">Call Now</button>
         </a>
       </div>
