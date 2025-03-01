@@ -50,7 +50,7 @@ class Home extends Component {
 
 const styles = {
   phoneIconContainer: {
-    position: "fixed", // Keeps the icon in a fixed position
+    position: "fixed",
     bottom: "20px", // Adjust the position from the bottom
     right: "20px", // Adjust the position from the right
     backgroundColor: "#CAEE5A", // Background color
