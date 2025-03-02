@@ -32,7 +32,7 @@ class Reviews extends Component {
         feedback:"I recently experienced with 700sewagecleaningservices.com for pipeline cleaning, and I’m highly impressed. The team was efficient, thorough, and ensured the pipelines were completely cleaned and free from any blockages. Great service!",
         date: "June 10, 2023",
       },
-      
+
       {
         name: "Gloria Williams",
         rating: "4.5/5",

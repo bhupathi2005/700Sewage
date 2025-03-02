@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/about.css"; 
-import about from "../images/about.png"; 
+import "../css/about.css";
+import about from "../images/about.png";
 const AboutUs = () => {
   return (
     <div className="about-us-container fadeInUp">

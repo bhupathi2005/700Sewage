@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons"; // Import phone icon
+import React, { useEffect } from "react";
+import Navbar from "../components/Navbar";
 import Homesec from "../components/Homesec";
 import About from "../components/About";
 import Working from "../components/Working";
@@ -9,48 +8,57 @@ import Promise from "../components/Promise";
 import WorkExp from "../components/WorkExp";
 import Reviews from "../components/Reviews";
 import Contacts from "../components/Contacts";
-import Footer from "../components/Footer.jsx";
-import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <section id="home_section">
-          <Homesec />
-        </section>
-        <section id="about_section">
-          <About />
-        </section>
-        <Working />
-        <section id="services_section">
-          <Services />
-        </section>
-        <Promise />
-        <WorkExp />
-        <Reviews />
-        <section id="contact">
-          <Contacts />
-        </section>
-        <Footer />
+const Home = ({ section }) => {
+  useEffect(() => {
+    if (section) {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [section]);
 
-        {/* Phone Icon */}
-        <a
-          href="tel:+9710555989664"
-          style={styles.phoneIconContainer}
-          title="Call us now"
-        >
-          <FontAwesomeIcon icon={faPhone} style={styles.phoneIcon} />
-        </a>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Navbar />
+      <section id="home_section">
+        <Homesec />
+      </section>
+      <section id="about-us">
+        <About />
+      </section>
+
+      <Working />
+      <section id="services_section">
+        <Services />
+      </section>
+      <Promise />
+      <WorkExp />
+      <Reviews />
+      <section id="contact">
+        <Contacts />
+      </section>
+      <Footer />
+
+      {/* Phone Icon */}
+      <a
+        href="tel:+971555989664"
+        style={styles.phoneIconContainer}
+        title="Call us now"
+      >
+        <FontAwesomeIcon icon={faPhone} style={styles.phoneIcon} />
+      </a>
+    </div>
+  );
+};
 
 const styles = {
   phoneIconContainer: {
-    position: "fixed", // Keeps the icon in a fixed position
+    position: "fixed",
     bottom: "20px", // Adjust the position from the bottom
     right: "20px", // Adjust the position from the right
     backgroundColor: "#CAEE5A", // Background color
