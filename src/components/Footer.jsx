@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Contact Now Section */}
         <div className="footer-section">
           <h4>Contact Now</h4>
-          <a href="tel:+0555989664" className="footer-contact-button">
+          <a href="tel:+971555989664" className="footer-contact-button">
             Call Us Now
           </a>
         </div>
