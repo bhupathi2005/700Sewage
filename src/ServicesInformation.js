@@ -10,7 +10,7 @@ const services = [
     title: "Sewage Tank Cleaning",
     img:SewageCleaningServices,
     imgAlt:"Top Sewage Cleaning Services in UAE",
-    details: "Comprehensive cleaning solutions in UAE.",
+    details: "",
     cleaningProcess: [
       {
         title: "Mechanized De-Watering",
