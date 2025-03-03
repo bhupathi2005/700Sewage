@@ -54,6 +54,12 @@ const Services = () => {
             <button
               onClick={() => handleOpenPopup(service)}
               className="service-linku"
+              style={{
+                display:
+                  service.cleaningProcess && service.cleaningProcess.length > 0
+                    ? "inline-block"
+                    : "none",
+              }}
             >
               Read more →
             </button>
