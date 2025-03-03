@@ -1,16 +1,15 @@
-import OilTankCleaning from "./images/OilTankCleaning.jpg"
-import PipeLineCleaning from "./images/PipeLineCleaning.jpg"
-import SewageCleaningServices from "./images/SewageCleaningServices.jpg"
-import SewageDrainageLineBlockageRemoval from "./images/SewageDrainageLineBlockageRemoval.jpg"
+import OilTankCleaning from "./images/OilTankCleaning.jpg";
+import PipeLineCleaning from "./images/PipeLineCleaning.jpg";
+import SewageCleaningServices from "./images/SewageCleaningServices.jpg";
+import SewageDrainageLineBlockageRemoval from "./images/SewageDrainageLineBlockageRemoval.jpg";
 import WaterTankCleaning from "./images/WaterTankCleaning.jpg";
-
 
 const services = [
   {
     title: "Sewage Tank Cleaning",
-    img:SewageCleaningServices,
-    imgAlt:"Top Sewage Cleaning Services in UAE",
-    details: "",
+    img: SewageCleaningServices,
+    imgAlt: "Top Sewage Cleaning Services in UAE",
+    details: "Comprehensive cleaning solutions in UAE.",
     cleaningProcess: [
       {
         title: "Mechanized De-Watering",
@@ -89,8 +88,8 @@ const services = [
   },
   {
     title: "Sewage Drainage Line Blockage Removal",
-    img:SewageDrainageLineBlockageRemoval,
-    imgAlt:"Top Drain Line Sewage Cleaning Services in UAE",
+    img: SewageDrainageLineBlockageRemoval,
+    imgAlt: "Top Drain Line Sewage Cleaning Services in UAE",
     details: "Specialized blockage removal services.",
     cleaningProcess: [
       {
@@ -196,8 +195,8 @@ const services = [
   },
   {
     title: "Oil Tank Cleaning",
-    img:OilTankCleaning,
-    imgAlt:"Top Oil Tank Services in UAE",
+    img: OilTankCleaning,
+    imgAlt: "Top Oil Tank Services in UAE",
     details: "Expert oil tank cleaning solutions.",
     cleaningProcess: [
       {
@@ -309,11 +308,11 @@ const services = [
       },
     ],
   },
-  
+
   {
     title: "Water Tank Cleaning",
-    img:WaterTankCleaning,
-    imgAlt:"Top Water Tank Cleaning Services in UAE",
+    img: WaterTankCleaning,
+    imgAlt: "Top Water Tank Cleaning Services in UAE",
     details: "Thorough water tank sanitization.",
     cleaningProcess: [
       {
@@ -497,8 +496,8 @@ const services = [
   },
   {
     title: "Pipeline & Drain Line Cleaning",
-    img:PipeLineCleaning,
-    imgAlt:"Top Pipeline Bloackage Removal Services in UAE",
+    img: PipeLineCleaning,
+    imgAlt: "Top Pipeline Bloackage Removal Services in UAE",
     details: "Advanced pipeline cleaning services.",
     cleaningProcess: [
       {

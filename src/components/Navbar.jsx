@@ -1,88 +1,83 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate & useLocation
+import { useNavigate, Link } from "react-router-dom";
 import "../css/navbar.css";
 import logo from "../images/logo.jpg";
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("home_section");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const navigate = useNavigate(); // Hook for navigation
-  const location = useLocation(); // Get current location
-
-  // Scroll to section when route changes
-  useEffect(() => {
-    const sectionId = location.hash.replace("#", ""); // Extract section ID from URL
-    if (sectionId) {
-      document.getElementById(sectionId)?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  }, [location]); // Run whenever location changes
+  const navigate = useNavigate();
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
-    navigate(`#${sectionId}`); // Update the URL
-    setActiveSection(sectionId);
+    navigate(
+      `/${
+        sectionId !== "home_section"
+          ? sectionId
+              .replace("_section", "")
+              .replace("contact", "contact-us")
+              .replace("about", "about-us") // ✅ Fix for /about
+          : ""
+      }`
+    );
 
     setTimeout(() => {
-      setMenuOpen(false); // Close the menu after scrolling
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
     }, 300);
+    setMenuOpen(false);
   };
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <nav className="navbar">
       <div className="container">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="700seweagecleaning" />
-        </a>
+        </Link>
         <div className={`menu ${menuOpen ? "active" : ""}`} ref={menuRef}>
-          <a
-            href="#home_section"
-            className={`menu-item ${activeSection === "home_section" ? "active" : ""}`}
+          <Link
+            to="/"
+            className="menu-item"
             onClick={(e) => handleNavClick(e, "home_section")}
           >
             Home
-          </a>
-          <a
-            href="#about_section"
-            className={`menu-item ${activeSection === "about_section" ? "active" : ""}`}
+          </Link>
+          <Link
+            to="/about-us"
+            className="menu-item"
             onClick={(e) => handleNavClick(e, "about_section")}
           >
             About Us
-          </a>
-          <a
-            href="#services_section"
-            className={`menu-item ${activeSection === "services_section" ? "active" : ""}`}
+          </Link>
+          <Link
+            to="/services"
+            className="menu-item"
             onClick={(e) => handleNavClick(e, "services_section")}
           >
             Services
-          </a>
-          <a
-            href="#contact"
-            className={`menu-item ${activeSection === "contact" ? "active" : ""}`}
+          </Link>
+          <Link
+            to="/contact-us"
+            className="menu-item"
             onClick={(e) => handleNavClick(e, "contact")}
           >
             Contact
-          </a>
+          </Link>
           <a href="tel:+971555989664" className="contact">
             Contact Us
           </a>
