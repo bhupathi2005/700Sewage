@@ -7,12 +7,11 @@ const ImageComparisonSlider = ({ before, after }) => {
   const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
-    if (isPaused || isDragging) return; // Pause animation if hovering or dragging
+    if (isPaused || isDragging) return; // Pause animation when interacting
 
     const intervalId = setInterval(() => {
       setPosition((prev) => {
         const newPosition = prev + direction * 0.5;
-
         if (newPosition >= 100) {
           setDirection(-1);
           return 100;
@@ -21,7 +20,6 @@ const ImageComparisonSlider = ({ before, after }) => {
           setDirection(1);
           return 0;
         }
-
         return newPosition;
       });
     }, 20);
@@ -29,16 +27,16 @@ const ImageComparisonSlider = ({ before, after }) => {
     return () => clearInterval(intervalId);
   }, [direction, isPaused, isDragging]);
 
-  // Handle user dragging the slider
   const handleStart = (e) => {
     setIsDragging(true);
-    const moveEvent = e.touches ? "touchmove" : "mousemove";
-    const endEvent = e.touches ? "touchend" : "mouseup";
-    document.addEventListener(moveEvent, handleMove);
-    document.addEventListener(endEvent, handleEnd);
+    document.addEventListener("mousemove", handleMove);
+    document.addEventListener("mouseup", handleEnd);
+    document.addEventListener("touchmove", handleMove, { passive: false });
+    document.addEventListener("touchend", handleEnd);
   };
 
   const handleMove = (e) => {
+    e.preventDefault(); // Prevent scrolling on mobile
     const slider = document.getElementById("slider-container");
     if (!slider) return;
 
@@ -51,22 +49,16 @@ const ImageComparisonSlider = ({ before, after }) => {
     }
   };
 
-  const handleEnd = (e) => {
+  const handleEnd = () => {
     setIsDragging(false);
-    const moveEvent = e.touches ? "touchmove" : "mousemove";
-    const endEvent = e.touches ? "touchend" : "mouseup";
-    document.removeEventListener(moveEvent, handleMove);
-    document.removeEventListener(endEvent, handleEnd);
+    document.removeEventListener("mousemove", handleMove);
+    document.removeEventListener("mouseup", handleEnd);
+    document.removeEventListener("touchmove", handleMove);
+    document.removeEventListener("touchend", handleEnd);
   };
 
   return (
-    <div
-      style={{
-        width: "100%",
-        maxWidth: "450px",
-        margin: "0 auto",
-      }}
-    >
+    <div style={{ width: "100%", maxWidth: "450px", margin: "0 auto" }}>
       <div
         id="slider-container"
         style={{
@@ -76,6 +68,7 @@ const ImageComparisonSlider = ({ before, after }) => {
           overflow: "hidden",
           borderRadius: "0.5rem",
           backgroundColor: "#111827",
+          touchAction: "none", // Prevents unwanted gestures on mobile
         }}
       >
         {/* After Image (Full Background) */}
@@ -137,7 +130,7 @@ const ImageComparisonSlider = ({ before, after }) => {
             top: "2rem",
             right: "2rem",
             padding: "0.75rem 1.5rem",
-            backgroundColor: " #CAEE5A",
+            backgroundColor: "#CAEE5A",
             borderRadius: "9999px",
             color: "white",
             fontWeight: "600",

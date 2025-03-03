@@ -29,6 +29,12 @@
   height: 350px;
   transition: transform 0.3s ease;
 }
+.service-card p {
+  max-height: 60px; /* Adjust this value as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Keeps it in a single line */
+}
 
 .service-card:hover {
   transform: scale(1.05);
