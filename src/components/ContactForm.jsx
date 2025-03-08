@@ -36,8 +36,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          
-
           // Reset form data after successful submission
           dispatch({ name: "name", value: "" });
           dispatch({ name: "email", value: "" });
