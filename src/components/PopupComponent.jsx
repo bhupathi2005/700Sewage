@@ -3,6 +3,7 @@ import "../css/services.css";
 import Work from "../images/work.png";
 import contact1 from "../images/contact1.jpg";
 import contact2 from "../images/contact2.jpg";
+import { Link } from "react-router-dom";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,10 +77,38 @@ const PopupComponent = ({
         <div className="header-container">
           <div className="header-content">
             <h1 className="header-title">
-              {title}
+              <Link
+                to="/services"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {title}
+              </Link>
               <br /> Services
             </h1>
-            <p className="header-subtitle">{details}</p>
+            <p className="header-subtitle">
+              {details
+                .split(/(<b>.*?<\/b>|<link .*?<\/link>)/g)
+                .map((part, i) => {
+                  if (part.startsWith("<b>")) {
+                    return (
+                      <strong key={i}>{part.replace(/<\/?b>/g, "")}</strong>
+                    );
+                  } else if (part.startsWith("<link ")) {
+                    const linkText = part.match(/>(.*?)<\/link>/)[1]; // Extract link text
+                    const to = part.match(/to="(.*?)"/)[1]; // Extract Link URL
+                    return (
+                      <Link
+                        key={i}
+                        to={to}
+                        style={{ color: "blue", textDecoration: "none" }}
+                      >
+                        {linkText}
+                      </Link>
+                    );
+                  }
+                  return part;
+                })}
+            </p>
           </div>
           <button className="header-close-btn" onClick={onClose}>
             ×
